@@ -1,0 +1,1357 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>KingLine Roofing - Premium Roofing Solutions in Texas</title>
+    <link rel="icon" type="image/png" href="assets/favicon.png">
+    <link rel="apple-touch-icon" href="assets/apple-touch-icon.png">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        :root {
+            --black: #000000;
+            --charcoal: #1C1C1C;
+            --light-charcoal: #4a4a4a;
+            --white: #f5f5f5;
+            --off-white: #e8e8e8;
+            --gold: #C4AF37;
+            --dark-gold: #B8860B;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            color: var(--charcoal);
+            background-color: var(--white);
+            line-height: 1.6;
+        }
+
+        h1, h2, h3 {
+            font-family: 'Georgia', serif;
+            font-weight: 600;
+            letter-spacing: -0.5px;
+        }
+
+        h1 {
+            font-size: 3rem;
+            line-height: 1.2;
+            margin-bottom: 1rem;
+            color: var(--black);
+        }
+
+        h2 {
+            font-size: 2.2rem;
+            margin-bottom: 1.5rem;
+            color: var(--black);
+            position: relative;
+            padding-bottom: 0.8rem;
+        }
+
+        h2::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 50px;
+            height: 3px;
+            background: var(--gold);
+        }
+
+        h3 {
+            font-size: 1.2rem;
+            margin-bottom: 0.8rem;
+            color: var(--black);
+        }
+
+        p {
+            font-size: 1rem;
+            color: var(--light-charcoal);
+            margin-bottom: 1rem;
+            line-height: 1.7;
+        }
+
+        a {
+            color: var(--gold);
+            text-decoration: none;
+            transition: color 0.3s ease;
+        }
+
+        a:hover {
+            color: var(--dark-gold);
+        }
+
+        /* Header */
+        header {
+            background: var(--black);
+            padding: 0.8rem 2rem;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+        }
+
+        nav {
+            max-width: 1400px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .header-left {
+            display: flex;
+            align-items: center;
+            gap: 2rem;
+        }
+
+        .logo {
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            height: 54px;
+        }
+
+        .logo img {
+            height: 100%;
+            width: auto;
+            display: block;
+        }
+
+        .phone-header {
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            background: var(--gold);
+            color: var(--black);
+            padding: 0.6rem 1.2rem;
+            border-radius: 3px;
+            font-weight: 700;
+            font-size: 0.95rem;
+            text-decoration: none;
+            transition: all 0.3s ease;
+        }
+
+        .phone-header:hover {
+            background: var(--dark-gold);
+            transform: translateY(-2px);
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 2rem;
+            list-style: none;
+            align-items: center;
+        }
+
+        .nav-links a {
+            color: var(--white);
+            font-size: 0.85rem;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+            transition: color 0.3s ease;
+            font-weight: 500;
+        }
+
+        .nav-links a:hover {
+            color: var(--gold);
+        }
+
+        .language-toggle {
+            display: flex;
+            gap: 0.4rem;
+            margin-left: 1rem;
+            border-left: 1px solid rgba(212, 165, 116, 0.3);
+            padding-left: 1rem;
+        }
+
+        .lang-btn {
+            background: none;
+            border: 1px solid var(--gold);
+            color: var(--gold);
+            padding: 0.3rem 0.6rem;
+            border-radius: 2px;
+            cursor: pointer;
+            font-size: 0.7rem;
+            text-transform: uppercase;
+            letter-spacing: 0.3px;
+            transition: all 0.3s ease;
+            font-weight: 600;
+        }
+
+        .lang-btn.active {
+            background: var(--gold);
+            color: var(--black);
+        }
+
+        .lang-btn:hover {
+            background: var(--gold);
+            color: var(--black);
+        }
+
+        /* Hero Section */
+        .hero {
+            position: relative;
+            padding: 7rem 1.5rem 6rem;
+            text-align: center;
+            color: #fff;
+            background: linear-gradient(180deg, rgba(0,0,0,0.55) 0%, rgba(0,0,0,0.82) 100%), url("assets/hero-reparacion-techos.jpg") center/cover no-repeat;
+            overflow: hidden;
+        }
+
+        .hero-content {
+            max-width: 760px;
+            margin: 0 auto;
+            position: relative;
+            z-index: 1;
+            animation: fadeInUp 0.8s ease-out;
+        }
+
+        .hero-content h1 {
+            font-size: 3.4rem;
+            margin-bottom: 1.2rem;
+            line-height: 1.15;
+            color: #fff;
+        }
+
+        .hero-content p {
+            font-size: 1.1rem;
+            margin: 0 auto 2rem;
+            max-width: 620px;
+            color: rgba(255, 255, 255, 0.9);
+            line-height: 1.7;
+        }
+
+        .hero-cta {
+            font-size: 1.25rem;
+            padding: 1.1rem 2.6rem;
+            display: inline-flex;
+            align-items: center;
+            gap: 0.6rem;
+            box-shadow: 0 10px 30px rgba(196, 175, 55, 0.35);
+        }
+
+        .cta-arrow { transition: transform 0.3s ease; }
+        .hero-cta:hover .cta-arrow { transform: translateX(5px); }
+
+        .call-now {
+            margin-top: 1.6rem;
+            font-weight: 700;
+            color: #fff;
+            font-size: 1rem;
+        }
+
+        .call-now a { color: var(--gold); }
+
+        .trust-line {
+            font-style: italic;
+            color: rgba(255, 255, 255, 0.85);
+            font-size: 0.95rem;
+            max-width: 520px;
+            margin: 0 auto 1.4rem;
+        }
+
+        .insurance-line {
+            color: rgba(255, 255, 255, 0.75);
+            font-size: 0.9rem;
+            letter-spacing: 0.3px;
+            margin: 0;
+        }
+
+        .cta-buttons {
+            display: flex;
+            gap: 1rem;
+            justify-content: center;
+            flex-wrap: wrap;
+            margin-bottom: 2rem;
+        }
+
+        .btn-primary {
+            background: var(--gold);
+            color: var(--black);
+            padding: 1rem 2rem;
+            border-radius: 3px;
+            font-weight: 700;
+            border: none;
+            cursor: pointer;
+            font-size: 1rem;
+            letter-spacing: 0.5px;
+            transition: all 0.3s ease;
+            text-decoration: none;
+            display: inline-block;
+        }
+
+        .btn-primary:hover {
+            background: var(--dark-gold);
+            transform: translateY(-3px);
+            box-shadow: 0 10px 25px rgba(212, 165, 116, 0.4);
+        }
+
+        .btn-secondary {
+            background: transparent;
+            color: var(--gold);
+            padding: 1rem 2rem;
+            border: 2px solid var(--gold);
+            border-radius: 3px;
+            font-weight: 700;
+            cursor: pointer;
+            font-size: 1rem;
+            letter-spacing: 0.5px;
+            transition: all 0.3s ease;
+            text-decoration: none;
+            display: inline-block;
+        }
+
+        .btn-secondary:hover {
+            background: var(--gold);
+            color: var(--black);
+        }
+
+        .location-badge {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            background: rgba(255, 255, 255, 0.12);
+            border: 1px solid rgba(255, 255, 255, 0.25);
+            padding: 0.5rem 1.1rem;
+            border-radius: 30px;
+            margin-bottom: 1.6rem;
+            font-size: 0.9rem;
+            color: #fff;
+            font-weight: 600;
+        }
+
+        /* Trust Section */
+        .trust-section {
+            background: #fafafa;
+            padding: 2rem;
+            border-radius: 5px;
+            margin-top: 2rem;
+            text-align: center;
+        }
+
+        .trust-section p {
+            font-size: 0.9rem;
+            color: var(--light-charcoal);
+            margin-bottom: 1rem;
+        }
+
+        .ratings {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 0.5rem;
+            margin: 1.2rem 0 0.8rem;
+        }
+
+        .star {
+            color: var(--gold);
+            font-size: 1.5rem;
+            letter-spacing: 3px;
+        }
+
+        .rating-text {
+            font-weight: 600;
+            color: var(--charcoal);
+            font-size: 0.95rem;
+        }
+
+        .insurance-logos {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 1.5rem;
+            flex-wrap: wrap;
+            margin-top: 1.5rem;
+            padding-top: 1.5rem;
+            border-top: 1px solid #ddd;
+        }
+
+        .insurance-logos p {
+            font-size: 0.75rem;
+            text-transform: uppercase;
+            color: var(--light-charcoal);
+            font-weight: 600;
+            width: 100%;
+            margin: 0;
+        }
+
+        .insurance-item {
+            background: var(--white);
+            padding: 0.5rem 0.8rem;
+            border-radius: 3px;
+            font-size: 0.75rem;
+            font-weight: 700;
+            color: var(--charcoal);
+        }
+
+        /* Insurance Partners Strip */
+        .insurance-strip {
+            background: #ffffff;
+            text-align: center;
+            padding: 2.8rem 1.5rem;
+            border-bottom: 1px solid #eee;
+        }
+
+        .insurance-strip-label {
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            font-size: 0.78rem;
+            font-weight: 700;
+            color: var(--light-charcoal);
+            margin-bottom: 1.6rem;
+        }
+
+        .insurance-strip-logos {
+            max-width: 980px;
+            width: 100%;
+            height: auto;
+            display: block;
+            margin: 0 auto;
+        }
+
+        /* Features Grid */
+        section {
+            padding: 4rem 2rem;
+            max-width: 1400px;
+            margin: 0 auto;
+        }
+
+        .section-subtitle {
+            color: var(--gold);
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            font-size: 0.8rem;
+            font-weight: 700;
+            margin-bottom: 1rem;
+        }
+
+        .features-carousel {
+            display: grid;
+            max-width: 620px;
+            margin: 3rem auto 0;
+        }
+
+        .feature-slide {
+            grid-area: 1 / 1;
+            text-align: center;
+            padding: 3rem 2rem;
+            background: #f9f9f9;
+            border-radius: 8px;
+            border-top: 4px solid var(--gold);
+            box-shadow: 0 12px 30px rgba(0, 0, 0, 0.07);
+            opacity: 0;
+            visibility: hidden;
+            transform: translateY(20px) scale(0.97);
+            transition: opacity 0.7s ease, transform 0.7s ease, visibility 0.7s;
+        }
+
+        .feature-slide.active {
+            opacity: 1;
+            visibility: visible;
+            transform: translateY(0) scale(1);
+        }
+
+        .feature-slide .feature-icon {
+            width: 84px;
+            height: 84px;
+        }
+
+        .feature-slide .feature-icon svg {
+            width: 46px;
+            height: 46px;
+        }
+
+        .carousel-wrap {
+            position: relative;
+            max-width: 760px;
+            margin: 3rem auto 0;
+        }
+
+        .carousel-wrap .features-carousel {
+            margin: 0 auto;
+        }
+
+        .carousel-arrow {
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            width: 46px;
+            height: 46px;
+            border-radius: 50%;
+            border: none;
+            background: var(--black);
+            color: var(--gold);
+            font-size: 1.8rem;
+            line-height: 1;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            box-shadow: 0 4px 14px rgba(0, 0, 0, 0.25);
+            transition: all 0.3s ease;
+            z-index: 2;
+        }
+
+        .carousel-arrow:hover {
+            background: var(--gold);
+            color: var(--black);
+            transform: translateY(-50%) scale(1.08);
+        }
+
+        .carousel-arrow.prev { left: 0; }
+        .carousel-arrow.next { right: 0; }
+
+        .carousel-dots {
+            display: flex;
+            justify-content: center;
+            gap: 0.6rem;
+            margin-top: 1.8rem;
+        }
+
+        .carousel-dot {
+            width: 11px;
+            height: 11px;
+            border-radius: 50%;
+            border: none;
+            background: rgba(0, 0, 0, 0.18);
+            cursor: pointer;
+            padding: 0;
+            transition: all 0.3s ease;
+        }
+
+        .carousel-dot:hover { background: var(--gold); }
+
+        .carousel-dot.active {
+            background: var(--gold);
+            width: 30px;
+            border-radius: 6px;
+        }
+
+        .feature-icon {
+            width: 60px;
+            height: 60px;
+            margin: 0 auto 1rem;
+            background: linear-gradient(135deg, var(--gold) 0%, var(--dark-gold) 100%);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.8rem;
+        }
+
+        .feature-icon svg {
+            width: 35px;
+            height: 35px;
+        }
+
+        .feature-item h3 {
+            margin-bottom: 0.8rem;
+        }
+
+        .feature-item p {
+            font-size: 0.95rem;
+            margin: 0;
+        }
+
+        /* Services Grid */
+        .services-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+            margin-top: 2rem;
+        }
+
+        .service-card {
+            background: var(--white);
+            border-radius: 5px;
+            overflow: hidden;
+            box-shadow: 0 3px 10px rgba(0, 0, 0, 0.08);
+            transition: all 0.3s ease;
+            border-top: 4px solid var(--gold);
+        }
+
+        .service-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 12px 25px rgba(0, 0, 0, 0.15);
+        }
+
+        .service-card-img {
+            width: 100%;
+            height: 180px;
+            background: linear-gradient(135deg, var(--charcoal) 0%, var(--black) 100%);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: var(--gold);
+            font-size: 3rem;
+        }
+
+        .service-card-img img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .service-card-content {
+            padding: 1.5rem;
+        }
+
+        .service-card h3 {
+            margin-bottom: 0.8rem;
+        }
+
+        .service-card p {
+            font-size: 0.95rem;
+            margin-bottom: 1rem;
+        }
+
+        /* Process Section */
+        .process-section {
+            background: #f9f9f9;
+        }
+
+        .process-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 2rem;
+            margin-top: 3rem;
+        }
+
+        .process-step {
+            text-align: center;
+            padding: 2rem;
+            background: var(--white);
+            border-radius: 5px;
+            border-left: 4px solid var(--gold);
+            position: relative;
+        }
+
+        .step-number {
+            width: 50px;
+            height: 50px;
+            background: var(--gold);
+            color: var(--black);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.5rem;
+            font-weight: 700;
+            margin: 0 auto 1rem;
+        }
+
+        .process-step h3 {
+            margin-bottom: 0.8rem;
+        }
+
+        .process-step p {
+            font-size: 0.95rem;
+            margin: 0;
+        }
+
+        /* Why Us Section */
+        .why-us-section {
+            background: var(--charcoal);
+            color: var(--white);
+        }
+
+        .why-us-section h2 {
+            color: var(--white);
+        }
+
+        .why-us-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 2rem;
+            margin-top: 2rem;
+        }
+
+        .why-item {
+            background: rgba(212, 165, 116, 0.1);
+            padding: 2rem;
+            border-radius: 5px;
+            border-left: 4px solid var(--gold);
+        }
+
+        .why-item h3 {
+            color: var(--gold);
+            margin-bottom: 0.8rem;
+        }
+
+        .why-item p {
+            color: var(--off-white);
+            margin: 0;
+            font-size: 0.95rem;
+        }
+
+        /* CTA Section */
+        .cta-section {
+            background: linear-gradient(135deg, var(--black) 0%, var(--charcoal) 100%);
+            color: var(--white);
+            text-align: center;
+            padding: 4rem 2rem;
+        }
+
+        .cta-section h2 {
+            color: var(--white);
+            margin-bottom: 1rem;
+        }
+
+        .cta-section p {
+            color: var(--off-white);
+            font-size: 1.1rem;
+            margin-bottom: 2rem;
+            max-width: 600px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .cta-phone {
+            font-size: 2rem;
+            font-weight: 700;
+            color: var(--gold);
+            margin: 1rem 0;
+        }
+
+        .contact-wrap {
+            display: flex;
+            gap: 2.5rem;
+            max-width: 920px;
+            margin: 2.5rem auto 0;
+            text-align: left;
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+
+        .contact-form {
+            flex: 1 1 460px;
+            background: #fff;
+            border-radius: 10px;
+            padding: 2rem;
+            box-shadow: 0 15px 40px rgba(0, 0, 0, 0.3);
+        }
+
+        .form-row {
+            display: flex;
+            gap: 1rem;
+        }
+
+        .form-row > * { flex: 1; }
+
+        .contact-form input,
+        .contact-form select,
+        .contact-form textarea {
+            width: 100%;
+            padding: 0.85rem 1rem;
+            margin-bottom: 1rem;
+            border: 1px solid #ddd;
+            border-radius: 6px;
+            font-size: 0.95rem;
+            font-family: inherit;
+            color: var(--charcoal);
+            background: #fafafa;
+        }
+
+        .contact-form input:focus,
+        .contact-form select:focus,
+        .contact-form textarea:focus {
+            outline: none;
+            border-color: var(--gold);
+            background: #fff;
+        }
+
+        .contact-form textarea { resize: vertical; }
+
+        .form-submit {
+            width: 100%;
+            font-size: 1.05rem;
+            padding: 1rem;
+            cursor: pointer;
+            margin-top: 0.3rem;
+        }
+
+        .hidden-field { display: none; }
+
+        .contact-aside {
+            flex: 0 1 260px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            text-align: center;
+        }
+
+        .contact-aside .or-call {
+            color: var(--off-white);
+            margin-bottom: 0.4rem;
+            font-size: 0.95rem;
+        }
+
+        .contact-aside .cta-phone { margin-top: 0; }
+
+        /* Footer */
+        footer {
+            background: var(--black);
+            color: var(--white);
+            padding: 3rem 2rem;
+            text-align: center;
+            border-top: 2px solid var(--gold);
+        }
+
+        .footer-content {
+            max-width: 1400px;
+            margin: 0 auto;
+        }
+
+        .footer-credit {
+            font-size: 0.85rem;
+            color: #999;
+            margin-top: 2rem;
+            padding-top: 2rem;
+            border-top: 1px solid #333;
+        }
+
+        .footer-credit a {
+            color: var(--gold);
+        }
+
+        /* Animations */
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            h1 { font-size: 2rem; }
+            h2 { font-size: 1.6rem; }
+            .hero { padding: 5rem 1.2rem 4rem; }
+            .hero-content h1 { font-size: 2.3rem; }
+            .hero-cta { font-size: 1.1rem; padding: 1rem 2rem; }
+            .header-left { gap: 1rem; }
+            .nav-links { gap: 1rem; font-size: 0.75rem; }
+            .logo img { height: 44px; }
+            .phone-header { font-size: 0.8rem; padding: 0.5rem 0.8rem; }
+            .cta-buttons { flex-direction: column; align-items: stretch; }
+            .btn-primary, .btn-secondary { width: 100%; }
+            section { padding: 2.5rem 1.5rem; }
+            .cta-phone { font-size: 1.5rem; }
+            .contact-wrap { flex-direction: column; gap: 1.5rem; }
+            .form-row { flex-direction: column; gap: 0; }
+        }
+
+        @media (max-width: 480px) {
+            header { padding: 0.6rem 1rem; }
+            nav { flex-direction: column; gap: 1rem; }
+            .header-left { width: 100%; justify-content: space-between; }
+            .nav-links { display: none; }
+            .hero { padding: 4rem 1.1rem 3.5rem; }
+            .hero-content h1 { font-size: 1.85rem; margin-bottom: 0.8rem; }
+            .hero-content p { font-size: 1rem; }
+            .features-carousel { max-width: 100%; }
+            .carousel-arrow { width: 40px; height: 40px; font-size: 1.5rem; }
+            .carousel-arrow.prev { left: 2px; }
+            .carousel-arrow.next { right: 2px; }
+            .services-grid { grid-template-columns: 1fr; }
+            .process-grid { grid-template-columns: 1fr; }
+            .why-us-grid { grid-template-columns: 1fr; }
+        }
+    </style>
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <nav>
+            <div class="header-left">
+                <a href="#" class="logo" aria-label="KingLine Roofing">
+                    <img src="assets/kingline-logo-gold.png" alt="KingLine Roofing">
+                </a>
+                <a href="tel:972-850-8869" class="phone-header">☎ (972) 850-8869</a>
+            </div>
+            <ul class="nav-links">
+                <li><a href="#services" data-en="Services" data-es="Servicios">Services</a></li>
+                <li><a href="#process" data-en="Process" data-es="Proceso">Process</a></li>
+                <li><a href="#contact" data-en="Contact" data-es="Contacto">Contact</a></li>
+            </ul>
+            <div class="language-toggle">
+                <button class="lang-btn active" id="lang-en" onclick="setLanguage('en')">EN</button>
+                <button class="lang-btn" id="lang-es" onclick="setLanguage('es')">ES</button>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="hero-content">
+            <div class="location-badge">📍 <span data-i18n="location-texas">Houston, TX &amp; Surrounding Areas</span></div>
+            <h1 data-i18n="hero-h1">Expert Roofing Solutions When You Need Them</h1>
+            <p data-i18n="hero-p">We proudly serve the Houston area and surrounding cities in Texas. Same-day service available — storm damage, insurance claims, or emergency repairs, we're here 24/7 to protect your home.</p>
+
+            <a href="#contact" class="btn-primary hero-cta" data-i18n="btn-schedule">Schedule Service Now <span class="cta-arrow">→</span></a>
+
+            <div class="call-now">
+                <span data-i18n="call-now">We're Open! Call Now:</span>
+                <a href="tel:972-850-8869">(972) 850-8869</a>
+            </div>
+
+            <div class="ratings">
+                <span class="star">★★★★★</span>
+            </div>
+
+            <p class="trust-line" data-i18n="trust-p">We've helped thousands of homeowners protect their roofs with expert service and professional support throughout the insurance claims process.</p>
+
+            <p class="insurance-line" data-i18n="insurance-accepted">All Major Insurance Companies Generally Accepted</p>
+        </div>
+    </section>
+
+    <!-- Insurance Partners Strip -->
+    <section class="insurance-strip">
+        <p class="insurance-strip-label" data-i18n="insurance-label">Insurance Partners</p>
+        <img class="insurance-strip-logos" src="assets/insurance-partners.png" alt="Allstate, State Farm, Farmers, GEICO, Progressive">
+    </section>
+
+    <!-- Features Section -->
+    <section>
+        <div class="section-subtitle" data-i18n="features-subtitle">Why Choose Us</div>
+        <h2 data-i18n="features-h2">What Makes Us Different</h2>
+        
+        <div class="carousel-wrap">
+            <button class="carousel-arrow prev" aria-label="Anterior">&#8249;</button>
+        <div class="features-carousel">
+            <div class="feature-slide active">
+                <div class="feature-icon">
+                    <svg viewBox="0 0 64 64" xmlns="http://www.w3.org/2000/svg">
+                        <circle cx="32" cy="32" r="28" fill="none" stroke="white" stroke-width="2"/>
+                        <line x1="32" y1="8" x2="32" y2="16" stroke="white" stroke-width="2" stroke-linecap="round"/>
+                        <line x1="32" y1="48" x2="32" y2="56" stroke="white" stroke-width="2" stroke-linecap="round"/>
+                        <line x1="56" y1="32" x2="48" y2="32" stroke="white" stroke-width="2" stroke-linecap="round"/>
+                        <line x1="16" y1="32" x2="8" y2="32" stroke="white" stroke-width="2" stroke-linecap="round"/>
+                        <text x="32" y="40" text-anchor="middle" fill="white" font-size="16" font-weight="bold" font-family="Arial">24</text>
+                    </svg>
+                </div>
+                <h3 data-i18n="feature1-h">24/7 Emergency Service</h3>
+                <p data-i18n="feature1-p">Available day and night, including weekends and holidays</p>
+            </div>
+            <div class="feature-slide">
+                <div class="feature-icon">
+                    <svg viewBox="0 0 64 64" xmlns="http://www.w3.org/2000/svg">
+                        <rect x="14" y="16" width="36" height="32" rx="2" fill="none" stroke="white" stroke-width="2"/>
+                        <line x1="14" y1="24" x2="50" y2="24" stroke="white" stroke-width="2"/>
+                        <circle cx="32" cy="40" r="3" fill="white"/>
+                        <line x1="20" y1="8" x2="20" y2="12" stroke="white" stroke-width="2" stroke-linecap="round"/>
+                        <line x1="44" y1="8" x2="44" y2="12" stroke="white" stroke-width="2" stroke-linecap="round"/>
+                    </svg>
+                </div>
+                <h3 data-i18n="feature2-h">Same-Day Appointments</h3>
+                <p data-i18n="feature2-p">Most appointments available the same or next day</p>
+            </div>
+            <div class="feature-slide">
+                <div class="feature-icon">
+                    <svg viewBox="0 0 64 64" xmlns="http://www.w3.org/2000/svg">
+                        <rect x="12" y="14" width="40" height="36" rx="2" fill="none" stroke="white" stroke-width="2"/>
+                        <path d="M 12 20 L 52 20" stroke="white" stroke-width="2"/>
+                        <circle cx="22" cy="32" r="4" fill="none" stroke="white" stroke-width="2"/>
+                        <path d="M 30 38 L 45 28 L 48 34 L 52 30" stroke="white" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+                    </svg>
+                </div>
+                <h3 data-i18n="feature3-h">Insurance Claim Experts</h3>
+                <p data-i18n="feature3-p">Expert guidance through the entire claims process</p>
+            </div>
+            <div class="feature-slide">
+                <div class="feature-icon">
+                    <svg viewBox="0 0 64 64" xmlns="http://www.w3.org/2000/svg">
+                        <polyline points="16,32 24,40 48,16" fill="none" stroke="white" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+                    </svg>
+                </div>
+                <h3 data-i18n="feature4-h">Zero Obligation</h3>
+                <p data-i18n="feature4-p">Free inspection and estimate with no pressure</p>
+            </div>
+        </div>
+            <button class="carousel-arrow next" aria-label="Siguiente">&#8250;</button>
+        </div>
+        <div class="carousel-dots">
+            <button class="carousel-dot active" data-slide="0" aria-label="1"></button>
+            <button class="carousel-dot" data-slide="1" aria-label="2"></button>
+            <button class="carousel-dot" data-slide="2" aria-label="3"></button>
+            <button class="carousel-dot" data-slide="3" aria-label="4"></button>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section id="services">
+        <div class="section-subtitle" data-i18n="services-subtitle">Our Services</div>
+        <h2 data-i18n="services-h2">Complete Roofing Solutions</h2>
+        
+        <div class="services-grid">
+            <div class="service-card">
+                <div class="service-card-img">
+                    <img src="assets/servicio-techos-residenciales.jpg" alt="Techos Residenciales">
+                </div>
+                <div class="service-card-content">
+                    <h3 data-i18n="service1-h">Residential Roofing</h3>
+                    <p data-i18n="service1-p">Complete solutions for your home, from repairs to full replacements</p>
+                </div>
+            </div>
+            <div class="service-card">
+                <div class="service-card-img">
+                    <img src="assets/servicio-techos-comerciales.jpg" alt="Techos Comerciales">
+                </div>
+                <div class="service-card-content">
+                    <h3 data-i18n="service2-h">Commercial Roofing</h3>
+                    <p data-i18n="service2-p">Professional solutions for businesses with minimal downtime</p>
+                </div>
+            </div>
+            <div class="service-card">
+                <div class="service-card-img">
+                    <img src="assets/servicio-reparacion-emergencia.jpg" alt="Reparacion de Emergencia">
+                </div>
+                <div class="service-card-content">
+                    <h3 data-i18n="service3-h">Emergency Repair</h3>
+                    <p data-i18n="service3-p">Fast response for leaks, storm damage, and urgent issues</p>
+                </div>
+            </div>
+            <div class="service-card">
+                <div class="service-card-img">
+                    <img src="assets/servicio-dano-tormenta.jpg" alt="Dano por Tormenta">
+                </div>
+                <div class="service-card-content">
+                    <h3 data-i18n="service4-h">Storm Damage</h3>
+                    <p data-i18n="service4-p">Inspection and documentation for insurance claims</p>
+                </div>
+            </div>
+            <div class="service-card">
+                <div class="service-card-img">
+                    <img src="assets/servicio-deteccion-fugas.jpg" alt="Deteccion de Fugas">
+                </div>
+                <div class="service-card-content">
+                    <h3 data-i18n="service5-h">Leak Detection</h3>
+                    <p data-i18n="service5-p">Advanced techniques to find and fix even difficult leaks</p>
+                </div>
+            </div>
+            <div class="service-card">
+                <div class="service-card-img">
+                    <img src="assets/servicio-mantenimiento.jpg" alt="Mantenimiento">
+                </div>
+                <div class="service-card-content">
+                    <h3 data-i18n="service6-h">Maintenance</h3>
+                    <p data-i18n="service6-p">Regular inspections to prevent problems before they start</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Process Section -->
+    <section id="process" class="process-section">
+        <div class="section-subtitle" data-i18n="process-subtitle">Our Process</div>
+        <h2 data-i18n="process-h2">From Call to Completion</h2>
+        
+        <div class="process-grid">
+            <div class="process-step">
+                <div class="step-number">1</div>
+                <h3 data-i18n="process1-h">Call Us</h3>
+                <p data-i18n="process1-p">Zero-obligation phone call. Get connected with an expert right away</p>
+            </div>
+            <div class="process-step">
+                <div class="step-number">2</div>
+                <h3 data-i18n="process2-h">Schedule Service</h3>
+                <p data-i18n="process2-p">We'll arrange an appointment that works for you, often same-day</p>
+            </div>
+            <div class="process-step">
+                <div class="step-number">3</div>
+                <h3 data-i18n="process3-h">Get It Fixed</h3>
+                <p data-i18n="process3-p">Expert technicians solve your problem and get you back to normal</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Why Choose Us Detail -->
+    <section class="why-us-section">
+        <h2 data-i18n="whyus-h2">Why KingLine Roofing</h2>
+        
+        <div class="why-us-grid">
+            <div class="why-item">
+                <h3 data-i18n="why1-h">Local Expertise</h3>
+                <p data-i18n="why1-p">We know Texas roofing codes, materials, and local weather challenges</p>
+            </div>
+            <div class="why-item">
+                <h3 data-i18n="why2-h">Insurance Specialists</h3>
+                <p data-i18n="why2-p">Expert support navigating complex insurance claims and documentation</p>
+            </div>
+            <div class="why-item">
+                <h3 data-i18n="why3-h">Professional Team</h3>
+                <p data-i18n="why3-p">Trained, courteous technicians who respect your property and time</p>
+            </div>
+            <div class="why-item">
+                <h3 data-i18n="why4-h">Fast Response</h3>
+                <p data-i18n="why4-p">24/7 availability with same-day appointments generally available</p>
+            </div>
+            <div class="why-item">
+                <h3 data-i18n="why5-h">Quality Materials</h3>
+                <p data-i18n="why5-p">Premium products paired with expert installation for lasting results</p>
+            </div>
+            <div class="why-item">
+                <h3 data-i18n="why6-h">Long-Term Support</h3>
+                <p data-i18n="why6-p">We build relationships with our clients, not just complete one-time jobs</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Final CTA -->
+    <section class="cta-section" id="contact">
+        <h2 data-i18n="final-cta-h2">Don't Wait - Protect Your Home Today</h2>
+        <p data-i18n="final-cta-p">Whether it's storm damage, a leak, or routine maintenance, we're here to help. Call now for a free inspection and estimate.</p>
+
+        <div class="contact-wrap">
+            <form class="contact-form" action="https://formsubmit.co/info@kinglineroofing.com" method="POST">
+                <input type="hidden" name="_subject" value="Nueva solicitud de presupuesto - KingLine Roofing">
+                <input type="hidden" name="_template" value="table">
+                <input type="hidden" name="_captcha" value="false">
+                <input type="text" name="_honey" class="hidden-field" tabindex="-1" autocomplete="off">
+                <div class="form-row">
+                    <input type="text" name="nombre" required placeholder="Full name" data-ph-en="Full name" data-ph-es="Nombre completo">
+                    <input type="tel" name="telefono" required placeholder="Phone number" data-ph-en="Phone number" data-ph-es="Número de teléfono">
+                </div>
+                <div class="form-row">
+                    <input type="email" name="email" placeholder="Email address" data-ph-en="Email address" data-ph-es="Correo electrónico">
+                    <select name="servicio" required>
+                        <option value="" selected disabled data-en="Service needed" data-es="Servicio que necesitas">Service needed</option>
+                        <option value="Residential" data-en="Residential Roofing" data-es="Techos Residenciales">Residential Roofing</option>
+                        <option value="Commercial" data-en="Commercial Roofing" data-es="Techos Comerciales">Commercial Roofing</option>
+                        <option value="Emergency" data-en="Emergency Repair" data-es="Reparación de Emergencia">Emergency Repair</option>
+                        <option value="Storm" data-en="Storm Damage" data-es="Daño por Tormenta">Storm Damage</option>
+                        <option value="Leak" data-en="Leak Detection" data-es="Detección de Fugas">Leak Detection</option>
+                        <option value="Maintenance" data-en="Maintenance" data-es="Mantenimiento">Maintenance</option>
+                        <option value="Other" data-en="Other" data-es="Otro">Other</option>
+                    </select>
+                </div>
+                <textarea name="mensaje" rows="4" placeholder="Tell us about your roofing needs..." data-ph-en="Tell us about your roofing needs..." data-ph-es="Cuéntanos sobre tu proyecto de techo..."></textarea>
+                <button type="submit" class="btn-primary form-submit" data-i18n="form-submit">Request My Free Quote</button>
+            </form>
+
+            <div class="contact-aside">
+                <p class="or-call" data-i18n="or-call">Prefer to talk? Call us now:</p>
+                <div class="cta-phone">
+                    <a href="tel:972-850-8869" style="color: var(--gold); text-decoration: none;">(972) 850-8869</a>
+                </div>
+                <p style="color: var(--off-white); margin-top: 1rem;" data-i18n="final-cta-availability">Available 24/7 - Emergency Service Available</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="footer-content">
+            <p data-i18n="footer-text">© 2024 KingLine Roofing. All rights reserved. Professional Roofing Solutions in Texas.</p>
+            <div class="footer-credit" data-i18n="footer-credit">Designed and developed by <a href="https://mercadeomrr.com" target="_blank">Krystina Zambrano · Mercadeo MRR LLC</a></div>
+        </div>
+    </footer>
+
+    <script>
+        const translations = {
+            en: {
+                "location-texas": "Houston, TX & Surrounding Areas",
+                "hero-h1": "Expert Roofing Solutions When You Need Them",
+                "hero-p": "We proudly serve the Houston area and surrounding cities in Texas. Same-day service available \u2014 storm damage, insurance claims, or emergency repairs, we're here 24/7 to protect your home.",
+                "btn-schedule": "Schedule Service Now",
+                "btn-quote": "Get a Free Quote",
+                "call-now": "We\u2019re Open! Call Now:",
+                "insurance-accepted": "All Major Insurance Companies Generally Accepted",
+                "rating-text": "(Based on 500+ satisfied customers)",
+                "trust-p": "We've helped thousands of homeowners protect their roofs with expert service and professional support throughout the insurance claims process.",
+                "insurance-label": "Insurance Partners",
+                "features-subtitle": "Why Choose Us",
+                "features-h2": "What Makes Us Different",
+                "feature1-h": "24/7 Emergency Service",
+                "feature1-p": "Available day and night, including weekends and holidays",
+                "feature2-h": "Same-Day Appointments",
+                "feature2-p": "Most appointments available the same or next day",
+                "feature3-h": "Insurance Claim Experts",
+                "feature3-p": "Expert guidance through the entire claims process",
+                "feature4-h": "Zero Obligation",
+                "feature4-p": "Free inspection and estimate with no pressure",
+                "services-subtitle": "Our Services",
+                "services-h2": "Complete Roofing Solutions",
+                "service1-h": "Residential Roofing",
+                "service1-p": "Complete solutions for your home, from repairs to full replacements",
+                "service2-h": "Commercial Roofing",
+                "service2-p": "Professional solutions for businesses with minimal downtime",
+                "service3-h": "Emergency Repair",
+                "service3-p": "Fast response for leaks, storm damage, and urgent issues",
+                "service4-h": "Storm Damage",
+                "service4-p": "Inspection and documentation for insurance claims",
+                "service5-h": "Leak Detection",
+                "service5-p": "Advanced techniques to find and fix even difficult leaks",
+                "service6-h": "Maintenance",
+                "service6-p": "Regular inspections to prevent problems before they start",
+                "process-subtitle": "Our Process",
+                "process-h2": "From Call to Completion",
+                "process1-h": "Call Us",
+                "process1-p": "Zero-obligation phone call. Get connected with an expert right away",
+                "process2-h": "Schedule Service",
+                "process2-p": "We'll arrange an appointment that works for you, often same-day",
+                "process3-h": "Get It Fixed",
+                "process3-p": "Expert technicians solve your problem and get you back to normal",
+                "whyus-h2": "Why KingLine Roofing",
+                "why1-h": "Local Expertise",
+                "why1-p": "We know Texas roofing codes, materials, and local weather challenges",
+                "why2-h": "Insurance Specialists",
+                "why2-p": "Expert support navigating complex insurance claims and documentation",
+                "why3-h": "Professional Team",
+                "why3-p": "Trained, courteous technicians who respect your property and time",
+                "why4-h": "Fast Response",
+                "why4-p": "24/7 availability with same-day appointments generally available",
+                "why5-h": "Quality Materials",
+                "why5-p": "Premium products paired with expert installation for lasting results",
+                "why6-h": "Long-Term Support",
+                "why6-p": "We build relationships with our clients, not just complete one-time jobs",
+                "final-cta-h2": "Don't Wait - Protect Your Home Today",
+                "final-cta-p": "Whether it's storm damage, a leak, or routine maintenance, we're here to help. Call now for a free inspection and estimate.",
+                "final-cta-availability": "Available 24/7 - Emergency Service Available",
+                "form-submit": "Request My Free Quote",
+                "or-call": "Prefer to talk? Call us now:",
+                "footer-text": "© 2024 KingLine Roofing. All rights reserved. Professional Roofing Solutions in Texas.",
+                "footer-credit": "Designed and developed by <a href=\"https://mercadeomrr.com\" target=\"_blank\">Krystina Zambrano · Mercadeo MRR LLC</a>"
+            },
+            es: {
+                "location-texas": "Houston, TX y Alrededores",
+                "hero-h1": "Soluciones Profesionales de Techos Cuando las Necesitas",
+                "hero-p": "Servimos con orgullo el área de Houston y las ciudades cercanas en Texas. Servicio el mismo día disponible \u2014 daño por tormenta, reclamos de seguros o reparaciones de emergencia, estamos aquí 24/7 para proteger tu hogar.",
+                "btn-schedule": "Agendar Servicio Ahora",
+                "btn-quote": "Obtener Presupuesto Gratis",
+                "call-now": "¡Estamos Abiertos! Llama Ahora:",
+                "insurance-accepted": "Aceptamos las Principales Aseguradoras",
+                "rating-text": "(Basado en 500+ clientes satisfechos)",
+                "trust-p": "Hemos ayudado a miles de propietarios a proteger sus techos con servicio experto y apoyo profesional durante todo el proceso de reclamos de seguros.",
+                "insurance-label": "Socios de Seguros",
+                "features-subtitle": "Por Qué Elegirte",
+                "features-h2": "Qué Nos Hace Diferentes",
+                "feature1-h": "Servicio de Emergencia 24/7",
+                "feature1-p": "Disponible día y noche, incluyendo fines de semana y festivos",
+                "feature2-h": "Citas el Mismo Día",
+                "feature2-p": "La mayoría de citas disponibles el mismo día o al siguiente",
+                "feature3-h": "Expertos en Reclamos de Seguros",
+                "feature3-p": "Orientación experta durante todo el proceso de reclamos",
+                "feature4-h": "Sin Obligación",
+                "feature4-p": "Inspección y presupuesto gratis sin presión",
+                "services-subtitle": "Nuestros Servicios",
+                "services-h2": "Soluciones Completas de Techos",
+                "service1-h": "Techos Residenciales",
+                "service1-p": "Soluciones completas para tu hogar, desde reparaciones hasta reemplazos totales",
+                "service2-h": "Techos Comerciales",
+                "service2-p": "Soluciones profesionales para negocios con tiempo de inactividad mínimo",
+                "service3-h": "Reparación de Emergencia",
+                "service3-p": "Respuesta rápida para fugas, daños por tormenta y problemas urgentes",
+                "service4-h": "Daño por Tormenta",
+                "service4-p": "Inspección y documentación para reclamos de seguros",
+                "service5-h": "Detección de Fugas",
+                "service5-p": "Técnicas avanzadas para encontrar y reparar fugas difíciles",
+                "service6-h": "Mantenimiento",
+                "service6-p": "Inspecciones regulares para prevenir problemas antes de que empiecen",
+                "process-subtitle": "Nuestro Proceso",
+                "process-h2": "De la Llamada a la Finalización",
+                "process1-h": "Llámanos",
+                "process1-p": "Llamada sin obligación. Conéctate con un experto inmediatamente",
+                "process2-h": "Agendar Servicio",
+                "process2-p": "Arreglaremos una cita que te funcione, a menudo el mismo día",
+                "process3-h": "Lo Arreglamos",
+                "process3-p": "Técnicos expertos resuelven tu problema y te devuelven a la normalidad",
+                "whyus-h2": "Por Qué KingLine Roofing",
+                "why1-h": "Experiencia Local",
+                "why1-p": "Conocemos los códigos de techos de Texas, materiales y desafíos climáticos locales",
+                "why2-h": "Especialistas en Seguros",
+                "why2-p": "Apoyo experto para navegar reclamos de seguros complejos y documentación",
+                "why3-h": "Equipo Profesional",
+                "why3-p": "Técnicos capacitados y corteses que respetan tu propiedad y tiempo",
+                "why4-h": "Respuesta Rápida",
+                "why4-p": "Disponibilidad 24/7 con citas generalmente disponibles el mismo día",
+                "why5-h": "Materiales de Calidad",
+                "why5-p": "Productos premium emparejados con instalación experta para resultados duraderos",
+                "why6-h": "Apoyo a Largo Plazo",
+                "why6-p": "Construimos relaciones con nuestros clientes, no solo completamos trabajos únicos",
+                "final-cta-h2": "No Esperes - Protege Tu Hogar Hoy",
+                "final-cta-p": "Ya sea daño por tormenta, una fuga o mantenimiento rutinario, estamos aquí para ayudar. Llama ahora para una inspección y presupuesto gratis.",
+                "final-cta-availability": "Disponible 24/7 - Servicio de Emergencia Disponible",
+                "form-submit": "Solicitar Mi Presupuesto Gratis",
+                "or-call": "¿Prefieres hablar? Llámanos ahora:",
+                "footer-text": "© 2024 KingLine Roofing. Todos los derechos reservados. Soluciones Profesionales de Techos en Texas.",
+                "footer-credit": "Diseñado y desarrollado por <a href=\"https://mercadeomrr.com\" target=\"_blank\">Krystina Zambrano · Mercadeo MRR LLC</a>"
+            }
+        };
+
+        let currentLanguage = 'en';
+
+        function setLanguage(lang) {
+            currentLanguage = lang;
+            document.getElementById('lang-en').classList.toggle('active', lang === 'en');
+            document.getElementById('lang-es').classList.toggle('active', lang === 'es');
+            
+            document.querySelectorAll('[data-en][data-es]').forEach(el => {
+                el.textContent = lang === 'en' ? el.dataset.en : el.dataset.es;
+            });
+
+            document.querySelectorAll('[data-ph-en][data-ph-es]').forEach(el => {
+                el.placeholder = lang === 'en' ? el.dataset.phEn : el.dataset.phEs;
+            });
+            
+            document.querySelectorAll('[data-i18n]').forEach(el => {
+                const key = el.dataset.i18n;
+                el.innerHTML = translations[lang][key] || translations['en'][key];
+            });
+            
+            localStorage.setItem('kingline-language', lang);
+        }
+
+        window.addEventListener('load', function() {
+            const savedLang = localStorage.getItem('kingline-language') || 'en';
+            setLanguage(savedLang);
+        });
+    </script>
+    <script>
+        (function () {
+            const slides = document.querySelectorAll('.feature-slide');
+            const dots = document.querySelectorAll('.carousel-dot');
+            const carousel = document.querySelector('.features-carousel');
+            if (!slides.length) return;
+            let idx = 0, timer;
+            function show(n) {
+                idx = (n + slides.length) % slides.length;
+                slides.forEach((s, i) => s.classList.toggle('active', i === idx));
+                dots.forEach((d, i) => d.classList.toggle('active', i === idx));
+            }
+            function start() { timer = setInterval(() => show(idx + 1), 2000); }
+            function reset() { clearInterval(timer); start(); }
+            dots.forEach((d, i) => d.addEventListener('click', () => { show(i); reset(); }));
+            const prevBtn = document.querySelector('.carousel-arrow.prev');
+            const nextBtn = document.querySelector('.carousel-arrow.next');
+            if (prevBtn) prevBtn.addEventListener('click', () => { show(idx - 1); reset(); });
+            if (nextBtn) nextBtn.addEventListener('click', () => { show(idx + 1); reset(); });
+            let sx = 0;
+            if (carousel) {
+                carousel.addEventListener('touchstart', e => { sx = e.changedTouches[0].clientX; }, { passive: true });
+                carousel.addEventListener('touchend', e => {
+                    const dx = e.changedTouches[0].clientX - sx;
+                    if (Math.abs(dx) > 40) { show(dx < 0 ? idx + 1 : idx - 1); reset(); }
+                }, { passive: true });
+            }
+            if (carousel) {
+                carousel.addEventListener('mouseenter', () => clearInterval(timer));
+                carousel.addEventListener('mouseleave', start);
+            }
+            show(0); start();
+        })();
+    </script>
+</body>
+</html>
